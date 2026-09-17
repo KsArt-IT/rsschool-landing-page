@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* fonts */
+    --font-family-base: 'Inter', sans-serif;
+    --fs-heading-1: 72px;
+    --fs-heading-1-mob: 40px;
+    --fw-heading-1: 600;
+    --lh-heading-1: 1.05;
+    --lh-heading-1-mob: 1.15;
+    --fs-heading-2: 60px;
+    --fs-heading-2-mob: 32px;
+    --fw-heading-2: 600;
+    --lh-heading-2: 1.25;
+    --lh-heading-2-mob: 1.25;
+    --fs-heading-3: 24px;
+    --fw-heading-3: 600;
+    --lh-heading-3: 1.25;
+    --fs-body-medium: 16px;
+    --fw-body-medium: 400;
+    --lh-body-medium: 1.50;
+    --fs-body-caption: 10px;
+    --fw-body-caption: 600;
+    --lh-body-caption: 1.40;
+    --fs-action-link: 16px;
+    --fw-action-link: 600;
+    --lh-action-link: 1.50;
+    --fs-action-burger-link: 32px;
+    --fw-action-burger-link: 600;
+    --lh-action-burger-link: 1.25;
+    /* Colors */
+    --color-bg: #B6AEA7;
+    /* light theme */
+    --color-text-primary: #403F3D;
+    --color-text-inverse: #E1D4C9;
+    --color-text-accent: #B0907A;
+    --color-bg-page: #E1D4C9;
+    --color-bg-container: #665F55;
+    --color-bg-overlay: #403F3D80;
+    --color-border-primary: #C1B6AD;
+    --color-border-inverse: #665F55;
+}
+
+[data-theme="dark"] {
+    --color-text-primary: #E1D4C9;
+    --color-text-inverse: #E1D4C9;
+    --color-text-accent: #B0907A;
+    --color-bg-page: #292826;
+    --color-bg-container: #403F3D;
+    --color-bg-overlay: #29282680;
+    --color-border-primary: #665F55;
+    --color-border-inverse: #C1B6AD;
+}
+
+/* Fonts sizes */
+.heading-1 {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-heading-1);
+    font-weight: var(--fw-heading-1);
+    line-height: var(--lh-heading-1);
+}
+
+.heading-1.accent {
+    font-style: italic;
+}
+
+.heading-2 {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-heading-2);
+    font-weight: var(--fw-heading-2);
+    line-height: var(--lh-heading-2);
+}
+
+.heading-2.accent {
+    font-style: italic;
+}
+
+.heading-3 {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-heading-3);
+    font-weight: var(--fw-heading-3);
+    line-height: var(--lh-heading-3);
+}
+
+.heading-3.accent {
+    font-style: italic;
+}
+
+.body-medium {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-body-medium);
+    font-weight: var(--fw-body-medium);
+    line-height: var(--lh-body-medium);
+}
+
+.body-caption {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-body-caption);
+    font-weight: var(--fw-body-caption);
+    line-height: var(--lh-body-caption);
+}
+
+.action-link {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-action-link);
+    font-weight: var(--fw-action-link);
+    line-height: var(--lh-action-link);
+}
+
+.action-burger-link {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-action-burger-link);
+    font-weight: var(--fw-action-burger-link);
+    line-height: var(--lh-action-burger-link);
+}
+
+@media (max-width: 380px) {
+    .heading-1 {
+        font-size: var(--fs-heading-1-mob);
+        line-height: var(--lh-heading-1-mob);
+    }
+
+    .heading-2 {
+        font-size: var(--fs-heading-2-mob);
+        line-height: var(--lh-heading-2-mob);
+    }
+}
+
+/* base page styles */
+html {
+    background-color: var(--color-bg);
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-body-medium);
+    font-weight: var(--fw-body-medium);
+    line-height: var(--lh-body-medium);
+    color: var(--color-text);
+    background-color: var(--color-bg-page);
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
