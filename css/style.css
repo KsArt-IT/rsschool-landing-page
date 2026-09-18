@@ -27,7 +27,7 @@
     /* fonts */
     --font-family-base: 'Inter', sans-serif;
     --fs-heading-1: 72px;
-    --fs-heading-1-mob: 40px;
+    --fs-heading-1-mob: 42px;
     --fw-heading-1: 600;
     --lh-heading-1: 1.05;
     --lh-heading-1-mob: 1.15;
@@ -192,8 +192,10 @@ a:hover {
     align-items: center;
     justify-content: center;
     height: 64px;
+    color: var(--color-text-primary);
     background-color: var(--color-border-primary);
     border: none;
+    border-radius: 32px;
 }
 
 .button-secondary {
@@ -244,7 +246,6 @@ a:hover {
     justify-content: center;
     width: 44px;
     height: 44px;
-    stroke: var(--color-text-primary);
     background-color: transparent;
     border: 1px solid var(--color-border-inverse);
     border-radius: 50%;
@@ -262,6 +263,7 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 200;
+    background-color: var(--color-bg-page);
 }
 
 .nav {
@@ -360,12 +362,10 @@ a:hover {
     align-items: flex-start;
     gap: 8px;
     border-bottom: 1px solid transparent;
-    stroke: var(--color-text-primary);
 }
 
 .header-menu-link:hover {
     border-bottom: 1px solid var(--color-text-accent);
-    stroke: var(--color-text-accent);
 }
 
 .header-menu-burger {
@@ -379,5 +379,73 @@ a:hover {
 
     .header-menu-burger {
         display: block;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 0 40px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+.hero-video {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 644px;
+    border-radius: 40px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--color-text-inverse);
+}
+
+.hero-text-title {
+    margin: 0;
+}
+
+.hero-text .accent {
+    color: var(--color-text-accent);
+}
+
+.hero-text-button {
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        left: 60px;
+    }
+}
+
+@media (max-width: 380px) {
+    .main {
+        padding: 0 16px;
+    }
+
+    .hero-video {
+        height: 552px;
+    }
+
+    .hero-text {
+        top: 60px;
+        left: 16px;
+        width: 316px;
     }
 }
