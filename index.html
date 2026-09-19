@@ -91,7 +91,7 @@
           <source src="assets/video/video-hero.mp4" type="video/mp4" />
         </video>
         <div class="hero-text">
-          <h1 class="hero-text-title heading-1"><span class="heading-1 accent">Enjoy</span> premium coffee at our charming cafe</h1>
+          <h1 class="heading-1"><span class="heading-1 accent">Enjoy</span> premium coffee at our charming cafe</h1>
           <p class="hero-text-subtitle body-medium">
             With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting
             space to enjoy their favorite beverage.
@@ -99,7 +99,47 @@
           <button class="hero-text-button button-primary action-link">Menu</button>
         </div>
       </section>
+      <section class="slider-wrapper">
+        <h2 class="heading-2 accent">Choose your <span class="slider-text-accent">favorite</span> coffee</h2>
+        <div class="slider-product">
+          <button class="button-slider slider-arrow-prev" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M18.5 12H6M12 18L6 12L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="slider-track">
+            <div class="slider-slide is-active">
+              <img class="slider-image" src="assets/images/coffee-slider-1.webp" alt="S’mores Frappuccino" />
+              <h3 class="slider-title heading-3">S’mores Frappuccino</h3>
+              <p class="slider-desc body-medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+              <p class="heading-3">$5.50</p>
+            </div>
+            <div class="slider-slide">
+              <img class="slider-image" src="assets/images/coffee-slider-2.webp" alt="Caramel Macchiato" />
+              <h3 class="slider-title heading-3">Caramel Macchiato</h3>
+              <p class="slider-desc body-medium">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+              <p class="heading-3">$5.00</p>
+            </div>
+            <div class="slider-slide">
+              <img class="slider-image" src="assets/images/coffee-slider-3.webp" alt="Ice Coffee" />
+              <h3 class="slider-title heading-3">Ice Coffee</h3>
+              <p class="slider-desc body-medium">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+              <p class="heading-3">$4.50</p>
+            </div>
+          </div>
+          <button class="button-slider slider-arrow-next" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="slider-dots">
+          <span class="slider-dot is-active" aria-label="Slide 1"></span>
+          <span class="slider-dot" aria-label="Slide 2"></span>
+          <span class="slider-dot" aria-label="Slide 3"></span>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer"></footer>
   </body>
 </html>

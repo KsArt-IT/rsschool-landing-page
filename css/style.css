@@ -81,6 +81,7 @@
     font-size: var(--fs-heading-1);
     font-weight: var(--fw-heading-1);
     line-height: var(--lh-heading-1);
+    margin: 0;
 }
 
 .heading-1.accent {
@@ -92,6 +93,7 @@
     font-size: var(--fs-heading-2);
     font-weight: var(--fw-heading-2);
     line-height: var(--lh-heading-2);
+    margin: 0;
 }
 
 .heading-2.accent {
@@ -103,6 +105,7 @@
     font-size: var(--fs-heading-3);
     font-weight: var(--fw-heading-3);
     line-height: var(--lh-heading-3);
+    margin: 0;
 }
 
 .heading-3.accent {
@@ -152,7 +155,7 @@
 /* base page styles */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 50px;
+    scroll-padding-top: 100px;
     background-color: var(--color-bg);
 }
 
@@ -164,6 +167,7 @@ body {
     color: var(--color-text-primary);
     background-color: var(--color-bg-page);
     margin: 0 auto;
+    padding-bottom: 40px;
     max-width: 1440px;
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -185,6 +189,10 @@ a {
 
 a:hover {
     color: var(--color-text-accent);
+}
+
+button {
+    cursor: pointer;
 }
 
 .button-primary {
@@ -228,8 +236,18 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 64px;
-    background-color: var(--color-bg-page);
+    width: 60px;
+    height: 60px;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-border-inverse);
+    border-radius: 50%;
+}
+
+.button-slider:hover {
+    color: var(--color-text-inverse);
+    background-color: var(--color-bg-container);
+    border: 1px solid transparent;
 }
 
 .button-social {
@@ -276,7 +294,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    column-gap: clamp(10px, 5cqi, 40px);
+    column-gap: clamp(10px, 4.44cqi, 40px);
     padding-left: 0;
 }
 
@@ -382,13 +400,16 @@ a:hover {
     }
 }
 
+/* Main page styles */
 .main {
     display: flex;
     flex-direction: column;
     gap: 100px;
+    margin-bottom: 100px;
     padding: 0 40px;
 }
 
+/* Hero section styles */
 .hero {
     position: relative;
     width: 100%;
@@ -414,10 +435,6 @@ a:hover {
     flex-direction: column;
     gap: 40px;
     color: var(--color-text-inverse);
-}
-
-.hero-text-title {
-    margin: 0;
 }
 
 .hero-text .accent {
@@ -448,4 +465,116 @@ a:hover {
         left: 16px;
         width: 316px;
     }
+}
+
+/* Slider section styles */
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.slider-text-accent {
+    color: var(--color-text-accent);
+}
+
+.slider-product {
+    position: relative;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+.slider-track {
+    max-width: 480px;
+    min-height: 640px;
+    margin: 0 auto;
+}
+
+.slider-slide {
+    display: none;
+}
+
+.slider-slide.is-active {
+    display: block;
+}
+
+.slider-image {
+    width: 100%;
+}
+
+.slider-title {
+    margin-top: 20px;
+}
+
+.slider-desc {
+    margin: 16px 0;
+}
+
+.slider-arrow-prev {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.slider-arrow-next {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .slider-arrow-prev {
+        left: 0;
+    }
+
+    .slider-arrow-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .slider-track {
+        max-width: 348px;
+        min-height: 538px;
+    }
+
+    .slider-arrow-prev {
+        display: none;
+    }
+
+    .slider-arrow-next {
+        display: none;
+    }
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.slider-dot {
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-border-primary);
+    border-radius: 2px;
+}
+
+.slider-dot.is-active {
+    background-color: var(--color-border-inverse);
+}
+
+/* Footer section styles */
+.footer {
+    height: 450px;
+    margin: 0 40px;
+    background-color: var(--color-bg-container);
+    border-radius: 40px;
 }
