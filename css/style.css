@@ -146,12 +146,16 @@
 
 /* base page styles */
 html {
+    scrollbar-gutter: stable;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
     background-color: var(--color-bg);
+    min-height: 100vh;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-family-base);
     font-size: var(--fs-body-medium);
     font-weight: var(--fw-body-medium);
@@ -193,7 +197,7 @@ button {
     justify-content: center;
     height: 64px;
     color: var(--color-text-primary);
-    background-color: var(--color-border-primary);
+    background-color: var(--color-bg-page);
     border: none;
     border-radius: 32px;
 }
@@ -226,7 +230,7 @@ button {
 .button-google-play:hover {
     color: var(--color-text-inverse);
     background-color: var(--color-bg-container);
-    border: 1px solid transparent;
+    border-color: transparent;
 }
 
 .button-store-text {
@@ -250,7 +254,7 @@ button {
 .button-slider:hover {
     color: var(--color-text-inverse);
     background-color: var(--color-bg-container);
-    border: 1px solid transparent;
+    border-color: transparent;
 }
 
 .button-social {
@@ -261,13 +265,13 @@ button {
     height: 60px;
     color: var(--color-text-inverse);
     background-color: transparent;
-    border: 1px solid var(--color-text-inverse);
+    border: 1px solid var(--color-border-primary);
     border-radius: 50%;
 }
 
 .button-social:hover {
-    color: var(--color-bg-container);
-    background-color: var(--color-text-inverse);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
     border-color: transparent;
 }
 
@@ -381,7 +385,7 @@ button {
 }
 
 [data-theme="dark"] .theme-switch:hover .theme-switch-icon-light {
-    background-color: var(--color-border-inverse);
+    background-color: var(--color-bg-container);
 }
 
 [data-theme="dark"] .theme-switch:hover .theme-switch-icon-dark {
@@ -416,6 +420,7 @@ button {
 /* Main page styles */
 .main {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 100px;
     margin-bottom: 100px;
@@ -454,8 +459,21 @@ button {
     color: var(--color-text-accent);
 }
 
-.hero-text-button {
+.hero-button {
     width: 200px;
+}
+
+.hero-button svg {
+    display: none;
+}
+
+.hero-button:hover {
+    color: var(--color-text-primary);
+}
+
+.hero-button:hover svg {
+    display: block;
+    margin-left: 8px;
 }
 
 @media (max-width: 768px) {

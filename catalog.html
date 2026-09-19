@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee House</title>
+    <title>Coffee House Catalog</title>
     <link rel="manifest" href="site.webmanifest" />
     <link rel="shortcut icon" href="favicon.ico" sizes="16x16" />
     <link rel="shortcut icon" href="favicon.ico" sizes="32x32" />
@@ -21,9 +21,9 @@
       </a>
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-list-item"><a href="#favorite">Favorite coffee</a></li>
-          <li class="nav-list-item"><a href="#about">About</a></li>
-          <li class="nav-list-item"><a href="#download">Mobile app</a></li>
+          <li class="nav-list-item"><a href="index.html#favorite">Favorite coffee</a></li>
+          <li class="nav-list-item"><a href="index.html#about">About</a></li>
+          <li class="nav-list-item"><a href="index.html#download">Mobile app</a></li>
           <li class="nav-list-item"><a href="#contacts">Contact us</a></li>
         </ul>
       </nav>
@@ -86,145 +86,6 @@
       </div>
     </header>
     <main class="main">
-      <section class="hero">
-        <video class="hero-video" poster="assets/images/img-hero.webp" autoplay muted loop playsinline>
-          <source src="assets/video/video-hero.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-text">
-          <h1 class="heading-1"><span class="accent">Enjoy</span> premium coffee at our charming cafe</h1>
-          <p class="hero-text-subtitle body-medium">
-            With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting
-            space to enjoy their favorite beverage.
-          </p>
-          <a class="hero-button button-primary action-link" href="catalog.html">
-            Menu
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M9.99935 7.49996C9.99935 6.66663 10.5946 5.83329 11.7851 5.83329C13.1 5.83329 14.166 4.7673 14.166 3.45234V2.91663"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M6.66732 7.5V7.08333C6.66732 5.70262 7.78661 4.58333 9.16732 4.58333C10.0878 4.58333 10.834 3.83714 10.834 2.91667V2.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M13.334 9.16663H15.4173C16.5679 9.16663 17.5007 10.0994 17.5007 11.25C17.5007 12.4006 16.5679 13.3333 15.4173 13.3333H14.1673"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="slider-wrapper" id="favorite">
-        <h2 class="slider-text heading-2">Choose your <span class="accent">favorite</span> coffee</h2>
-        <div class="slider-product">
-          <button class="button-slider slider-arrow-prev" aria-label="Previous">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M18.5 12H6M12 18L6 12L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-          <div class="slider-track">
-            <div class="slider-slide is-active">
-              <img class="slider-image" src="assets/images/coffee-slider-1.webp" alt="S’mores Frappuccino" />
-              <h3 class="slider-title heading-3">S’mores Frappuccino</h3>
-              <p class="slider-desc body-medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-              <p class="heading-3">$5.50</p>
-            </div>
-            <div class="slider-slide">
-              <img class="slider-image" src="assets/images/coffee-slider-2.webp" alt="Caramel Macchiato" />
-              <h3 class="slider-title heading-3">Caramel Macchiato</h3>
-              <p class="slider-desc body-medium">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
-              <p class="heading-3">$5.00</p>
-            </div>
-            <div class="slider-slide">
-              <img class="slider-image" src="assets/images/coffee-slider-3.webp" alt="Ice Coffee" />
-              <h3 class="slider-title heading-3">Ice Coffee</h3>
-              <p class="slider-desc body-medium">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
-              <p class="heading-3">$4.50</p>
-            </div>
-          </div>
-          <button class="button-slider slider-arrow-next" aria-label="Next">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
-        <div class="slider-dots">
-          <span class="slider-dot is-active" aria-label="Slide 1"></span>
-          <span class="slider-dot" aria-label="Slide 2"></span>
-          <span class="slider-dot" aria-label="Slide 3"></span>
-        </div>
-      </section>
-      <section class="about" id="about">
-        <h2 class="about-text heading-2">
-          Resource is <span class="accent">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.
-        </h2>
-        <div class="about-gallery">
-          <div class="about-gallery-column">
-            <img class="about-image about-image-1" src="assets/images/about-1.webp" alt="Woman enjoying coffee at a cafe table" />
-            <img class="about-image about-image-2" src="assets/images/about-2.webp" alt="Cup of coffee on a table" />
-          </div>
-          <div class="about-gallery-column">
-            <img class="about-image about-image-3" src="assets/images/about-3.webp" alt="Man drinking coffee while working on a laptop" />
-            <img class="about-image about-image-4" src="assets/images/about-4.webp" alt="Couple enjoying coffee together" />
-          </div>
-        </div>
-      </section>
-      <section class="download" id="download">
-        <div class="download-info">
-          <h2 class="download-title heading-2"><span class="accent">Download</span> our app to&nbsp;start ordering</h2>
-          <p class="body-medium">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
-          <div class="download-buttons">
-            <button class="button-app-store" type="button">
-              <svg class="button-store-icon" width="36" height="36" viewBox="0 0 36 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path
-                  d="M26.7063 18.6307C26.6694 14.6324 30.0641 12.6872 30.2193 12.5966C28.2967 9.86366 25.3169 9.49026 24.2697 9.46048C21.767 9.20369 19.3393 10.9206 18.0644 10.9206C16.764 10.9206 14.8008 9.48529 12.6848 9.52747C9.96196 9.56841 7.41468 11.1055 6.01762 13.4923C3.13444 18.359 5.28474 25.5108 8.04705 29.4446C9.42884 31.3712 11.0435 33.5223 13.1569 33.4466C15.2245 33.3635 15.9968 32.1614 18.4919 32.1614C20.9641 32.1614 21.6893 33.4466 23.8447 33.3983C26.0637 33.3635 27.4608 31.463 28.7942 29.519C30.3911 27.3108 31.0323 25.1362 31.0578 25.0245C31.0056 25.0071 26.7483 23.4229 26.7063 18.6307Z"
-                />
-                <path
-                  d="M22.6347 6.87268C23.7468 5.51675 24.5076 3.67205 24.2964 1.80005C22.6869 1.86952 20.674 2.88554 19.5149 4.21169C18.4893 5.38029 17.5732 7.29571 17.8099 9.097C19.6179 9.2285 21.4743 8.20752 22.6347 6.87268Z"
-                />
-              </svg>
-              <span class="button-store-text">
-                <span class="body-caption">Available on the</span>
-                <span class="action-link">App Store</span>
-              </span>
-            </button>
-            <button class="button-google-play" type="button">
-              <svg class="button-store-icon" width="36" height="36" viewBox="0 0 36 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path
-                  d="M3.7558 3.20309C3.39335 3.57302 3.18359 4.14896 3.18359 4.89483V31.4995C3.18359 32.2454 3.39335 32.8213 3.7558 33.1913L3.84525 33.2725L19.1359 18.3701V18.0182L3.84525 3.11587L3.7558 3.20309Z"
-                />
-                <path
-                  d="M26.0776 23.34L20.9863 18.3701V18.0182L26.0837 13.0482L26.1979 13.1129L32.2345 16.4618C33.9573 17.4122 33.9573 18.9761 32.2345 19.9325L26.1979 23.2754L26.0776 23.34Z"
-                />
-                <path d="M25.5916 23.0812L20.3801 18L5 32.9971C5.5722 33.5836 6.50531 33.6542 7.56643 33.0678L25.5916 23.0812Z" />
-                <path d="M25.2733 12.1876L7.24807 2.20103C6.18695 1.62058 5.25384 1.69125 4.68164 2.27772L20.0617 17.2688L25.2733 12.1876Z" />
-              </svg>
-              <span class="button-store-text">
-                <span class="body-caption">Available on</span>
-                <span class="action-link">Google Play</span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <img class="download-image" src="assets/images/mobile-screens.webp" alt="Coffee House mobile app screens" />
-      </section>
     </main>
     <footer class="footer">
       <div class="footer-brand">
