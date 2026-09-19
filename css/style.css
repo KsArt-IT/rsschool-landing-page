@@ -76,16 +76,16 @@
 }
 
 /* Fonts sizes */
+.accent {
+    font-style: italic;
+}
+
 .heading-1 {
     font-family: var(--font-family-base);
     font-size: var(--fs-heading-1);
     font-weight: var(--fw-heading-1);
     line-height: var(--lh-heading-1);
     margin: 0;
-}
-
-.heading-1.accent {
-    font-style: italic;
 }
 
 .heading-2 {
@@ -96,20 +96,12 @@
     margin: 0;
 }
 
-.heading-2.accent {
-    font-style: italic;
-}
-
 .heading-3 {
     font-family: var(--font-family-base);
     font-size: var(--fs-heading-3);
     font-weight: var(--fw-heading-3);
     line-height: var(--lh-heading-3);
     margin: 0;
-}
-
-.heading-3.accent {
-    font-style: italic;
 }
 
 .body-medium {
@@ -476,7 +468,7 @@ button {
     text-align: center;
 }
 
-.slider-text-accent {
+.slider-text .accent {
     color: var(--color-text-accent);
 }
 
