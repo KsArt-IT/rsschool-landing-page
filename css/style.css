@@ -78,6 +78,7 @@
 /* Fonts sizes */
 .accent {
     font-style: italic;
+    color: var(--color-text-accent);
 }
 
 .heading-1 {
@@ -275,6 +276,37 @@ button {
     border-color: transparent;
 }
 
+.button-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 46px;
+    padding: 8px 16px 8px 8px;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-border-primary);
+    border-radius: 23px;
+}
+
+.button-item.is-active,
+.button-item:hover {
+    color: var(--color-text-inverse);
+    background-color: var(--color-bg-container);
+    border-color: transparent;
+}
+
+.button-item img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: var(--color-border-primary);
+    border-radius: 50%;
+}
+
+.button-item.is-active img {
+    background-color: var(--color-bg-page);
+}
+
 .button-icon-burger {
     display: inline-flex;
     align-items: center;
@@ -455,10 +487,6 @@ button {
     color: var(--color-text-inverse);
 }
 
-.hero-text .accent {
-    color: var(--color-text-accent);
-}
-
 .hero-button {
     width: 200px;
 }
@@ -505,10 +533,6 @@ button {
     justify-content: center;
     gap: 40px;
     text-align: center;
-}
-
-.slider-text .accent {
-    color: var(--color-text-accent);
 }
 
 .slider-product {
@@ -609,10 +633,6 @@ button {
     gap: 40px;
 }
 
-.about-text .accent {
-    color: var(--color-text-accent);
-}
-
 .about-gallery {
     display: flex;
     gap: 40px;
@@ -669,10 +689,6 @@ button {
     max-width: 630px;
 }
 
-.download-title .accent {
-    color: var(--color-text-accent);
-}
-
 .download-buttons {
     display: flex;
     gap: 20px;
@@ -724,10 +740,6 @@ button {
     max-width: 530px;
 }
 
-.footer .accent {
-    color: var(--color-text-accent);
-}
-
 .footer-socials {
     display: flex;
     gap: 12px;
@@ -776,4 +788,15 @@ button {
         flex-direction: column;
         padding: 60px 16px;
     }
+}
+
+/* Catalog page styles */
+.catalog-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
 }
