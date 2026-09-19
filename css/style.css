@@ -27,15 +27,18 @@
     /* fonts */
     --font-family-base: 'Inter', sans-serif;
     --fs-heading-1: 72px;
+    --fs-heading-1-tablet: 60px;
+    --fs-heading-1-small: 48px;
     --fs-heading-1-mob: 42px;
     --fw-heading-1: 600;
     --lh-heading-1: 1.05;
     --lh-heading-1-mob: 1.15;
     --fs-heading-2: 60px;
+    --fs-heading-2-tablet: 48px;
+    --fs-heading-2-small: 38px;
     --fs-heading-2-mob: 32px;
     --fw-heading-2: 600;
     --lh-heading-2: 1.25;
-    --lh-heading-2-mob: 1.25;
     --fs-heading-3: 24px;
     --fw-heading-3: 600;
     --lh-heading-3: 1.25;
@@ -137,7 +140,27 @@
     margin: 0;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 768px) {
+    .heading-1 {
+        font-size: var(--fs-heading-1-tablet);
+    }
+
+    .heading-2 {
+        font-size: var(--fs-heading-2-tablet);
+    }
+}
+
+@media (max-width: 640px) {
+    .heading-1 {
+        font-size: var(--fs-heading-1-small);
+    }
+
+    .heading-2 {
+        font-size: var(--fs-heading-2-small);
+    }
+}
+
+@media (max-width: 488px) {
     .heading-1 {
         font-size: var(--fs-heading-1-mob);
         line-height: var(--lh-heading-1-mob);
@@ -145,7 +168,6 @@
 
     .heading-2 {
         font-size: var(--fs-heading-2-mob);
-        line-height: var(--lh-heading-2-mob);
     }
 }
 
@@ -484,10 +506,11 @@ button {
     position: absolute;
     top: 100px;
     left: 100px;
-    width: 530px;
+    max-width: 530px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-right: 40px;
     color: var(--color-text-inverse);
 }
 
@@ -511,10 +534,18 @@ button {
 @media (max-width: 768px) {
     .hero-text {
         left: 60px;
+        margin-right: 30px;
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 640px) {
+    .hero-text {
+        left: 40px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 488px) {
     .main {
         padding: 0 16px;
     }
@@ -526,7 +557,7 @@ button {
     .hero-text {
         top: 60px;
         left: 16px;
-        width: 316px;
+        margin-right: 16px;
     }
 }
 
@@ -839,6 +870,7 @@ button {
     min-height: 508px;
     border: 1px solid var(--color-border-primary);
     border-radius: 40px;
+    cursor: pointer;
 }
 
 .catalog-content {
