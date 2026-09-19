@@ -821,10 +821,14 @@ button {
 }
 
 .catalog-grid {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+}
+
+.catalog-grid.is-active {
+    display: flex;
 }
 
 .catalog-item {
