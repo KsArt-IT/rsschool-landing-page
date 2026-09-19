@@ -571,6 +571,58 @@ button {
     background-color: var(--color-border-inverse);
 }
 
+/* About section styles */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-text .accent {
+    color: var(--color-text-accent);
+}
+
+.about-gallery {
+    display: flex;
+    gap: 40px;
+}
+
+.about-gallery-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 660px;
+    gap: 40px;
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.about-image-1,
+.about-image-4 {
+    height: 590px;
+}
+
+.about-image-2,
+.about-image-3 {
+    height: 430px;
+}
+
+@media (max-width: 768px) {
+    .about-gallery {
+        flex-direction: column;
+    }
+
+    .about-image-2,
+    .about-image-3 {
+        display: none;
+    }
+}
+
 /* Footer section styles */
 .footer {
     height: 450px;
