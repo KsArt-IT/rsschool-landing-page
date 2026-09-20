@@ -15,9 +15,9 @@
   </head>
   <body data-theme="light">
     <header class="header action-link">
-      <a class="header-logo" href="index.html">
-        <img class="header-logo-light" src="assets/images/logo-light.svg" alt="Coffee house logo" />
-        <img class="header-logo-dark" src="assets/images/logo-dark.svg" alt="Coffee house logo" />
+      <a class="header-logo" href="index.html" aria-label="Coffee house logo">
+        <img class="header-logo-light" src="assets/images/logo-light.svg" alt="" />
+        <img class="header-logo-dark" src="assets/images/logo-dark.svg" alt="" />
       </a>
       <nav class="nav">
         <ul class="nav-list">
@@ -27,16 +27,16 @@
           <li class="nav-list-item"><a href="#contacts">Contact us</a></li>
         </ul>
       </nav>
-      <button class="theme-switch" id="theme-button" type="button">
+      <button class="theme-switch" id="theme-button" data-action="theme-switch" aria-label="Toggle theme" type="button">
         <span class="theme-switch-icon-light">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M10 3V1C10 0.45 10.45 0 11 0C11.55 0 12 0.45 12 1V3C12 3.55 11.55 4 11 4C10.45 4 10 3.55 10 3ZM17.36 6.05L18.77 4.63C19.16 4.24 19.16 3.61 18.77 3.22C18.38 2.83 17.75 2.83 17.36 3.22L15.95 4.64C15.56 5.03 15.56 5.66 15.95 6.05C16.34 6.44 16.97 6.44 17.36 6.05ZM21 10H19C18.45 10 18 10.45 18 11C18 11.55 18.45 12 19 12H21C21.55 12 22 11.55 22 11C22 10.45 21.55 10 21 10ZM11 18C10.45 18 10 18.45 10 19V21C10 21.55 10.45 22 11 22C11.55 22 12 21.55 12 21V19C12 18.45 11.55 18 11 18ZM4.64 6.05L3.22 4.64C2.83 4.25 2.83 3.61 3.22 3.23C3.61 2.85 4.25 2.84 4.63 3.23L6.04 4.64C6.43 5.03 6.43 5.67 6.04 6.05C5.65 6.43 5.02 6.44 4.64 6.05ZM15.95 15.95C15.56 16.34 15.56 16.98 15.95 17.36L17.36 18.77C17.75 19.16 18.39 19.16 18.77 18.77C19.16 18.38 19.16 17.74 18.77 17.36L17.36 15.95C16.98 15.56 16.34 15.56 15.95 15.95ZM1 12H3C3.55 12 4 11.55 4 11C4 10.45 3.55 10 3 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM4.64 18.78L6.05 17.37C6.44 16.98 6.44 16.34 6.05 15.96C5.66 15.58 5.02 15.57 4.64 15.96L3.23 17.37C2.84 17.76 2.84 18.4 3.23 18.78C3.61 19.17 4.25 19.17 4.64 18.78ZM11 5C7.69 5 5 7.69 5 11C5 14.31 7.69 17 11 17C14.31 17 17 14.31 17 11C17 7.69 14.31 5 11 5Z"
             />
           </svg>
         </span>
         <span class="theme-switch-icon-dark">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M9 0C4.03 0 0 4.03 0 9C0 13.97 4.03 18 9 18C13.97 18 18 13.97 18 9C18 8.54 17.96 8.08 17.9 7.64C16.92 9.01 15.32 9.9 13.5 9.9C10.52 9.9 8.1 7.48 8.1 4.5C8.1 2.69 8.99 1.08 10.36 0.0999999C9.92 0.0399999 9.46 0 9 0Z"
             />
@@ -45,8 +45,8 @@
       </button>
       <div class="header-menu">
         <a class="header-menu-link action-link" href="catalog.html">
-          <span>Menu</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          Menu
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z"
               stroke="currentColor"
@@ -77,11 +77,19 @@
             />
           </svg>
         </a>
-        <button class="header-menu-burger button-icon-burger" type="button">
-          <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.75 0.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M0.75 8.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <button class="header-menu-burger button-icon-burger" data-action="burger-menu" aria-expanded="false" aria-label="Open menu" type="button">
+          <span class="icon-burger-open">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0.75 0.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M0.75 8.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="icon-burger-close">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0.75 0.75L12.0637 12.0637" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M0.75 12.0637L12.0637 0.749998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
         </button>
       </div>
     </header>
@@ -89,22 +97,23 @@
       <section class="catalog-tabs">
         <h1 class="heading-2">Behind each of our cups hides an <span class="accent">amazing surprise</span></h1>
         <div class="tabs-filter">
-          <button class="tabs-filter button-item is-active" type="button">
-            <img src="assets/icons/coffee.png" alt="Coffee" />
+          <button class="tabs-filter button-item is-active" type="button" aria-current="true">
+            <img src="assets/icons/coffee.png" alt="" />
             Coffee
           </button>
           <button class="tabs-filter button-item" type="button">
-            <img src="assets/icons/tea.png" alt="Tea" />
+            <img src="assets/icons/tea.png" alt="" />
             Tea
           </button>
           <button class="tabs-filter button-item" type="button">
-            <img src="assets/icons/coffee.png" alt="Dessert" />
+            <img src="assets/icons/dessert.png" alt="" />
             Dessert
           </button>
         </div>
       </section>
       <section class="catalog-products">
-        <div class="catalog-grid is-active">
+        <!-- Coffee -->
+        <div class="catalog-grid is-active" id="catalog-grid-coffee">
           <div class="catalog-item">
             <img class="catalog-image" src="assets/images/coffee-1.webp" alt="Irish coffee photo" />
             <div class="catalog-content">
@@ -137,7 +146,7 @@
               <p class="heading-3">$5.00</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/coffee-5.webp" alt="Espresso photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Espresso</h2>
@@ -145,7 +154,7 @@
               <p class="heading-3">$4.50</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/coffee-6.webp" alt="Latte photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Latte</h2>
@@ -153,7 +162,7 @@
               <p class="heading-3">$5.50</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/coffee-7.webp" alt="Latte macchiato photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Latte macchiato</h2>
@@ -161,7 +170,7 @@
               <p class="heading-3">$5.50</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/coffee-8.webp" alt="Coffee with cognac photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Coffee with cognac</h2>
@@ -170,7 +179,8 @@
             </div>
           </div>
         </div>
-        <div class="catalog-grid">
+        <!-- Tea -->
+        <div class="catalog-grid" id="catalog-grid-tea">
           <div class="catalog-item">
             <img class="catalog-image" src="assets/images/tea-1.webp" alt="Moroccan tea photo" />
             <div class="catalog-content">
@@ -204,7 +214,8 @@
             </div>
           </div>
         </div>
-        <div class="catalog-grid">
+        <!-- Dessert -->
+        <div class="catalog-grid" id="catalog-grid-dessert">
           <div class="catalog-item">
             <img class="catalog-image" src="assets/images/dessert-1.webp" alt="Marble cheesecake photo" />
             <div class="catalog-content">
@@ -237,7 +248,7 @@
               <p class="heading-3">$4.00</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/dessert-5.webp" alt="Pancakes photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Pancakes</h2>
@@ -245,7 +256,7 @@
               <p class="heading-3">$4.50</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/dessert-6.webp" alt="Honey cake photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Honey cake</h2>
@@ -253,7 +264,7 @@
               <p class="heading-3">$4.50</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/dessert-7.webp" alt="Chocolate cake photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Chocolate cake</h2>
@@ -261,7 +272,7 @@
               <p class="heading-3">$5.50</p>
             </div>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item is-hidden">
             <img class="catalog-image" src="assets/images/dessert-8.webp" alt="Black forest photo" />
             <div class="catalog-content">
               <h2 class="heading-3">Black forest</h2>
@@ -270,6 +281,18 @@
             </div>
           </div>
         </div>
+        <button class="button-show-more button-slider is-active" id="show-more" aria-label="Show more" aria-controls="catalog-grid-coffee" type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
       </section>
     </main>
     <footer class="footer">
@@ -327,7 +350,7 @@
         <ul class="footer-contacts-list">
           <li>
             <a class="link-contact action-link" href="https://maps.google.com/?q=8558+Green+Rd.,+LA" target="_blank" rel="noopener">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path
                   d="M16.6673 8.33333C16.6673 12.0152 10.0007 18.3333 10.0007 18.3333C10.0007 18.3333 3.33398 12.0152 3.33398 8.33333C3.33398 4.65144 6.31875 1.66667 10.0007 1.66667C13.6825 1.66667 16.6673 4.65144 16.6673 8.33333Z"
                   stroke="currentColor"
@@ -346,7 +369,7 @@
           </li>
           <li>
             <a class="link-contact action-link" href="tel:+16035550123">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path
                   d="M15.0984 12.2516L11.6665 12.9166C9.34845 11.7531 7.91654 10.4166 7.08321 8.33329L7.72483 4.89154L6.51197 1.66663L3.72946 1.66663C2.60191 1.66663 1.71466 2.59958 1.90108 3.71161C2.29888 6.08454 3.37231 10.0391 6.24987 12.9166C9.27338 15.9401 13.5661 17.3318 16.1378 17.9288C17.299 18.1983 18.3332 17.2908 18.3332 16.0988L18.3332 13.4843L15.0984 12.2516Z"
                   stroke="currentColor"
@@ -360,7 +383,7 @@
           </li>
           <li>
             <span class="link-contact action-link">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <g clip-path="url(#clip0_217_1736)">
                   <path d="M10 5L10 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   <path

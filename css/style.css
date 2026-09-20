@@ -339,6 +339,7 @@ button {
     justify-content: center;
     width: 44px;
     height: 44px;
+    color: var(--color-text-primary);
     background-color: transparent;
     border: 1px solid var(--color-border-inverse);
     border-radius: 50%;
@@ -463,6 +464,22 @@ button {
 
 .header-menu-burger {
     display: none;
+}
+
+.icon-burger-open {
+    display: block;
+}
+
+.icon-burger-close {
+    display: none;
+}
+
+.header-menu-burger[aria-expanded="true"] .icon-burger-open {
+    display: none;
+}
+
+.header-menu-burger[aria-expanded="true"] .icon-burger-close {
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -884,4 +901,19 @@ button {
 
 .catalog-content .body-medium {
     flex: 1;
+}
+
+.button-show-more {
+    display: none;
+    margin: 40px auto 0 auto;
+}
+
+@media (max-width: 768px) {
+    .catalog-item.is-hidden {
+        display: none;
+    }
+
+    .button-show-more.is-active {
+        display: block;
+    }
 }
