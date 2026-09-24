@@ -378,12 +378,6 @@ button {
     padding: 10px 0;
 }
 
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
-    }
-}
-
 .header-logo-dark {
     display: none;
 }
@@ -489,6 +483,47 @@ button {
 
     .header-menu-burger {
         display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    [data-menu-expanded="true"] .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 100px;
+        background-color: var(--color-bg-page);
+        z-index: 200;
+    }
+
+    [data-menu-expanded="true"] .header-menu-link {
+        display: block;
+    }
+
+    [data-menu-expanded="true"] .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
+@media (max-height: 600px) {
+    [data-menu-expanded="true"] .nav-menu {
+        gap: 20px;
+    }
+
+    [data-menu-expanded="true"] .nav-list {
+        gap: 10px;
     }
 }
 
