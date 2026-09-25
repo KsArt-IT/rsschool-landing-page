@@ -211,8 +211,10 @@ a {
     text-wrap: nowrap;
 }
 
-a:hover {
-    color: var(--color-text-accent);
+@media (hover: hover) and (pointer: fine) {
+    a:hover {
+        color: var(--color-text-accent);
+    }
 }
 
 button {
@@ -254,11 +256,14 @@ button {
     border-radius: 32px;
 }
 
-.button-app-store:hover,
-.button-google-play:hover {
-    color: var(--color-text-inverse);
-    background-color: var(--color-bg-container);
-    border-color: transparent;
+@media (hover: hover) and (pointer: fine) {
+
+    .button-app-store:hover,
+    .button-google-play:hover {
+        color: var(--color-text-inverse);
+        background-color: var(--color-bg-container);
+        border-color: transparent;
+    }
 }
 
 .button-store-text {
@@ -279,10 +284,12 @@ button {
     border-radius: 50%;
 }
 
-.button-slider:hover {
-    color: var(--color-text-inverse);
-    background-color: var(--color-bg-container);
-    border-color: transparent;
+@media (hover: hover) and (pointer: fine) {
+    .button-slider:hover {
+        color: var(--color-text-inverse);
+        background-color: var(--color-bg-container);
+        border-color: transparent;
+    }
 }
 
 .button-social {
@@ -297,10 +304,12 @@ button {
     border-radius: 50%;
 }
 
-.button-social:hover {
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-page);
-    border-color: transparent;
+@media (hover: hover) and (pointer: fine) {
+    .button-social:hover {
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-page);
+        border-color: transparent;
+    }
 }
 
 .button-item {
@@ -315,11 +324,18 @@ button {
     border-radius: 23px;
 }
 
-.button-item.is-active,
-.button-item:hover {
+.button-item.is-active {
     color: var(--color-text-inverse);
     background-color: var(--color-bg-container);
     border-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button-item:hover {
+        color: var(--color-text-inverse);
+        background-color: var(--color-bg-container);
+        border-color: transparent;
+    }
 }
 
 .button-item img {
@@ -347,9 +363,11 @@ button {
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.button-icon-burger:hover {
-    color: var(--color-text-inverse);
-    background-color: var(--color-border-inverse);
+@media (hover: hover) and (pointer: fine) {
+    .button-icon-burger:hover {
+        color: var(--color-text-inverse);
+        background-color: var(--color-border-inverse);
+    }
 }
 
 /* Theme header styles */
@@ -431,9 +449,11 @@ button {
     border-radius: 50%;
 }
 
-.theme-switch:hover .theme-switch-icon-dark {
-    color: var(--color-text-inverse);
-    background-color: var(--color-border-inverse);
+@media (hover: hover) and (pointer: fine) {
+    .theme-switch:hover .theme-switch-icon-dark {
+        color: var(--color-text-inverse);
+        background-color: var(--color-border-inverse);
+    }
 }
 
 [data-theme="dark"] .theme-switch-icon-light {
@@ -444,12 +464,14 @@ button {
     background-color: var(--color-text-accent);
 }
 
-[data-theme="dark"] .theme-switch:hover .theme-switch-icon-light {
-    background-color: var(--color-bg-container);
-}
+@media (hover: hover) and (pointer: fine) {
+    [data-theme="dark"] .theme-switch:hover .theme-switch-icon-light {
+        background-color: var(--color-bg-container);
+    }
 
-[data-theme="dark"] .theme-switch:hover .theme-switch-icon-dark {
-    background-color: var(--color-text-accent);
+    [data-theme="dark"] .theme-switch:hover .theme-switch-icon-dark {
+        background-color: var(--color-text-accent);
+    }
 }
 
 .header-menu-link {
@@ -459,8 +481,10 @@ button {
     border-bottom: 1px solid transparent;
 }
 
-.header-menu-link:hover {
-    border-bottom: 1px solid var(--color-text-accent);
+@media (hover: hover) and (pointer: fine) {
+    .header-menu-link:hover {
+        border-bottom: 1px solid var(--color-text-accent);
+    }
 }
 
 .header-menu-burger {
@@ -542,6 +566,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .icon-burger-open,
     .icon-burger-close,
     .nav-menu,
@@ -607,13 +632,15 @@ button {
     display: none;
 }
 
-.hero-button:hover {
-    color: var(--color-text-primary);
-}
+@media (hover: hover) and (pointer: fine) {
+    .hero-button:hover {
+        color: var(--color-text-primary);
+    }
 
-.hero-button:hover svg {
-    display: block;
-    margin-left: 8px;
+    .hero-button:hover svg {
+        display: block;
+        margin-left: 8px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -906,9 +933,11 @@ button {
     border-bottom: 2px solid transparent;
 }
 
-.link-contact:hover {
-    color: var(--color-text-inverse);
-    border-bottom-color: var(--color-text-inverse);
+@media (hover: hover) and (pointer: fine) {
+    .link-contact:not(.no-link):hover {
+        color: var(--color-text-inverse);
+        border-bottom-color: var(--color-text-inverse);
+    }
 }
 
 @media (max-width: 768px) {
@@ -948,8 +977,10 @@ button {
     transition: transform var(--transition-duration);
 }
 
-.catalog-item:hover .catalog-image {
-    transform: scale(0.9);
+@media (hover: hover) and (pointer: fine) {
+    .catalog-item:hover .catalog-image {
+        transform: scale(0.9);
+    }
 }
 
 .catalog-grid {
