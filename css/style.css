@@ -630,17 +630,25 @@ button {
 }
 
 .slider-track {
-    max-width: 480px;
-    min-height: 640px;
-    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-list {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.4s ease;
 }
 
 .slider-slide {
-    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
 }
 
-.slider-slide.is-active {
-    display: block;
+.slider-slide-content {
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 .slider-image {
@@ -682,9 +690,8 @@ button {
 }
 
 @media (max-width: 380px) {
-    .slider-track {
+    .slider-slide-content {
         max-width: 348px;
-        min-height: 538px;
     }
 
     .slider-arrow-prev {
@@ -705,12 +712,21 @@ button {
 .slider-dot {
     width: 40px;
     height: 4px;
+    padding: 0;
     background-color: var(--color-border-primary);
+    border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .slider-dot.is-active {
     background-color: var(--color-border-inverse);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slider-list {
+        transition: none;
+    }
 }
 
 /* About section styles */
