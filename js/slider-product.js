@@ -9,6 +9,11 @@ class SliderProduct {
         nextButton: '[data-action="slider-next"]',
     }
 
+    attributes = {
+        ariaCurrent: "aria-current",
+        ariaHidden: "aria-hidden",
+    }
+
     swipeThreshold = 40
 
     transitionDuration = 400
@@ -51,8 +56,8 @@ class SliderProduct {
     setupClones() {
         const firstClone = this.slides[0].cloneNode(true)
         const lastClone = this.slides[this.slidesCount - 1].cloneNode(true)
-        firstClone.setAttribute("aria-hidden", "true")
-        lastClone.setAttribute("aria-hidden", "true")
+        firstClone.setAttribute(this.attributes.ariaHidden, "true")
+        lastClone.setAttribute(this.attributes.ariaHidden, "true")
 
         this.list.append(firstClone)
         this.list.prepend(lastClone)
@@ -119,6 +124,7 @@ class SliderProduct {
     updateDots(realIndex) {
         this.dots.forEach((dot, i) => {
             dot.classList.toggle("is-active", i === realIndex)
+            dot.setAttribute(this.attributes.ariaCurrent, String(i === realIndex))
         })
     }
 
