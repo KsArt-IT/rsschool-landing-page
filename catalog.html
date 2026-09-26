@@ -14,13 +14,13 @@
     <script type="module" src="js/main.js"></script>
   </head>
   <body data-theme="light" data-menu-expanded="false">
-    <header class="header action-link">
+    <header class="header">
       <a class="header-logo" href="index.html" aria-label="Coffee house logo">
         <img class="header-logo-light" src="assets/images/logo-light.svg" alt="" />
         <img class="header-logo-dark" src="assets/images/logo-dark.svg" alt="" />
       </a>
       <nav class="nav">
-        <div class="nav-menu" id="nav-menu">
+        <div class="nav-menu action-link" id="nav-menu">
           <ul class="nav-list">
             <li class="nav-list-item"><a href="index.html#favorite">Favorite coffee</a></li>
             <li class="nav-list-item"><a href="index.html#about">About</a></li>
@@ -30,35 +30,35 @@
         </div>
       </nav>
       <button class="theme-switch" id="theme-button" data-action="theme-switch" aria-label="Toggle theme" type="button">
-        <span class="theme-switch-icon-light">
+        <div class="theme-switch-icon-light">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M10 3V1C10 0.45 10.45 0 11 0C11.55 0 12 0.45 12 1V3C12 3.55 11.55 4 11 4C10.45 4 10 3.55 10 3ZM17.36 6.05L18.77 4.63C19.16 4.24 19.16 3.61 18.77 3.22C18.38 2.83 17.75 2.83 17.36 3.22L15.95 4.64C15.56 5.03 15.56 5.66 15.95 6.05C16.34 6.44 16.97 6.44 17.36 6.05ZM21 10H19C18.45 10 18 10.45 18 11C18 11.55 18.45 12 19 12H21C21.55 12 22 11.55 22 11C22 10.45 21.55 10 21 10ZM11 18C10.45 18 10 18.45 10 19V21C10 21.55 10.45 22 11 22C11.55 22 12 21.55 12 21V19C12 18.45 11.55 18 11 18ZM4.64 6.05L3.22 4.64C2.83 4.25 2.83 3.61 3.22 3.23C3.61 2.85 4.25 2.84 4.63 3.23L6.04 4.64C6.43 5.03 6.43 5.67 6.04 6.05C5.65 6.43 5.02 6.44 4.64 6.05ZM15.95 15.95C15.56 16.34 15.56 16.98 15.95 17.36L17.36 18.77C17.75 19.16 18.39 19.16 18.77 18.77C19.16 18.38 19.16 17.74 18.77 17.36L17.36 15.95C16.98 15.56 16.34 15.56 15.95 15.95ZM1 12H3C3.55 12 4 11.55 4 11C4 10.45 3.55 10 3 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM4.64 18.78L6.05 17.37C6.44 16.98 6.44 16.34 6.05 15.96C5.66 15.58 5.02 15.57 4.64 15.96L3.23 17.37C2.84 17.76 2.84 18.4 3.23 18.78C3.61 19.17 4.25 19.17 4.64 18.78ZM11 5C7.69 5 5 7.69 5 11C5 14.31 7.69 17 11 17C14.31 17 17 14.31 17 11C17 7.69 14.31 5 11 5Z"
             />
           </svg>
-        </span>
-        <span class="theme-switch-icon-dark">
+        </div>
+        <div class="theme-switch-icon-dark">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M9 0C4.03 0 0 4.03 0 9C0 13.97 4.03 18 9 18C13.97 18 18 13.97 18 9C18 8.54 17.96 8.08 17.9 7.64C16.92 9.01 15.32 9.9 13.5 9.9C10.52 9.9 8.1 7.48 8.1 4.5C8.1 2.69 8.99 1.08 10.36 0.0999999C9.92 0.0399999 9.46 0 9 0Z"
             />
           </svg>
-        </span>
+        </div>
       </button>
       <div id="menu-burger">
         <button class="header-menu-burger button-icon-burger" id="burger-button" aria-label="Open menu" aria-expanded="false" type="button">
-          <span class="icon-burger-open">
+          <div class="icon-burger-open">
             <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M0.75 0.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M0.75 8.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-          </span>
-          <span class="icon-burger-close">
+          </div>
+          <div class="icon-burger-close">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M0.75 0.75L12.0637 12.0637" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M0.75 12.0637L12.0637 0.749998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-          </span>
+          </div>
         </button>
         <a class="header-menu-link action-link" id="menu-link" href="catalog.html">
           Menu
@@ -99,15 +99,15 @@
       <section class="catalog-tabs">
         <h1 class="heading-2">Behind each of our cups hides an <span class="accent">amazing surprise</span></h1>
         <div class="tabs-filter">
-          <button class="tabs-filter button-item is-active" type="button" aria-current="true">
+          <button class="button-item is-active" type="button" data-category="coffee" aria-current="true">
             <img src="assets/icons/coffee.png" alt="" />
             Coffee
           </button>
-          <button class="tabs-filter button-item" type="button">
+          <button class="button-item" type="button" data-category="tea">
             <img src="assets/icons/tea.png" alt="" />
             Tea
           </button>
-          <button class="tabs-filter button-item" type="button">
+          <button class="button-item" type="button" data-category="dessert">
             <img src="assets/icons/dessert.png" alt="" />
             Dessert
           </button>
@@ -384,7 +384,7 @@
             </a>
           </li>
           <li>
-            <span class="link-contact action-link">
+            <span class="link-contact action-link no-link">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <g clip-path="url(#clip0_217_1736)">
                   <path d="M10 5L10 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

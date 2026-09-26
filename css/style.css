@@ -237,9 +237,18 @@ button {
     align-items: center;
     justify-content: center;
     height: 44px;
+    color: var(--color-text-primary);
     background-color: transparent;
-    border: 1px solid var(--color-border-primary);
-    border-radius: 50%;
+    border: 1px solid var(--color-border-inverse);
+    border-radius: 22px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button-secondary:hover {
+        color: var(--color-text-inverse);
+        background-color: var(--color-bg-container);
+        border-color: transparent;
+    }
 }
 
 .button-app-store,
@@ -356,6 +365,8 @@ button {
     justify-content: center;
     width: 44px;
     height: 44px;
+    margin: 0;
+    padding: 0;
     color: var(--color-text-primary);
     background-color: transparent;
     border: 1px solid var(--color-border-inverse);
@@ -483,7 +494,7 @@ button {
 
 @media (hover: hover) and (pointer: fine) {
     .header-menu-link:hover {
-        border-bottom: 1px solid var(--color-text-accent);
+        border-color: var(--color-text-accent);
     }
 }
 
@@ -551,6 +562,7 @@ button {
 
     [data-menu-expanded="true"] .header-menu-link {
         display: block;
+        border-color: transparent;
     }
 
     .nav-list {
@@ -572,6 +584,16 @@ button {
     .nav-menu,
     .button-icon-burger {
         transition: none;
+    }
+}
+
+@media (max-height: 680px) {
+    [data-menu-expanded="true"] .nav-menu {
+        gap: 60px;
+    }
+
+    [data-menu-expanded="true"] .nav-list {
+        gap: 40px;
     }
 }
 
@@ -1020,6 +1042,7 @@ button {
 
 .button-show-more {
     display: none;
+    padding: 0 40px;
     margin: 40px auto 0 auto;
 }
 

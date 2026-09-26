@@ -6,6 +6,11 @@ class MenuBurger {
         burgerButton: "#burger-button",
     }
 
+    classes = {
+        opened: "action-burger-link",
+        closed: "action-link",
+    }
+
     attributes = {
         ariaExpanded: "aria-expanded",
         ariaLabel: "aria-label",
@@ -65,6 +70,11 @@ class MenuBurger {
     }
 
     setStateMenu(isOpen = false) {
+        this.navMenu.classList.remove(isOpen ? this.classes.closed : this.classes.opened)
+        this.menuLink.classList.remove(isOpen ? this.classes.closed : this.classes.opened)
+        this.navMenu.classList.add(isOpen ? this.classes.opened : this.classes.closed)
+        this.menuLink.classList.add(isOpen ? this.classes.opened : this.classes.closed)
+
         this.burgerButton.setAttribute(this.attributes.ariaExpanded, String(isOpen))
         this.burgerButton.setAttribute(this.attributes.ariaLabel, isOpen ? this.labels.opened : this.labels.closed)
         document.body.dataset.menuExpanded = String(isOpen)
