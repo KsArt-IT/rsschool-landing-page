@@ -431,8 +431,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 0px 3px;
-    height: 44px;
+    padding: 3px;
     background-color: transparent;
     border: 1px solid var(--color-border-primary);
     border-radius: 22px;
@@ -458,6 +457,22 @@ button {
     color: var(--color-text-primary);
     background-color: transparent;
     border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+.theme-switch {
+        border-radius: 26px;
+    }
+    
+    .theme-switch-icon-light {
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-switch-icon-dark {
+        width: 44px;
+        height: 44px;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
