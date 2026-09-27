@@ -1,7 +1,4 @@
-import { getTheme, setTheme, toggleTheme } from "./theme.js"
-
-setTheme(getTheme())
-
-const themeButton = document.querySelector("#theme-button")
-
-themeButton.addEventListener("click", toggleTheme)
+import "./theme-switcher.js"
+import "./menu-burger.js"
+import "./slider-product.js"
+import "./catalog.js"
