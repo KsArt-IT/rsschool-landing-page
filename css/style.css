@@ -1067,3 +1067,148 @@ button {
         display: block;
     }
 }
+
+.catalog-item:focus-visible {
+    outline: 2px solid var(--color-text-accent);
+    outline-offset: 4px;
+}
+
+/* Product modal styles */
+html:has(.modal[open]) {
+    overflow: hidden;
+}
+
+.modal {
+    width: min(800px, calc(100% - 80px));
+    max-width: none;
+    max-height: calc(100dvh - 40px);
+    margin: auto;
+    padding: 0;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+    border: 1px solid var(--color-border-primary);
+    border-radius: 40px;
+    overscroll-behavior: contain;
+}
+
+.modal[open] {
+    animation: modal-show var(--transition-animation);
+}
+
+.modal::backdrop {
+    background-color: var(--color-bg-overlay, #403F3D80);
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: minmax(0, 310px) minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+    padding: 16px;
+}
+
+.modal-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 310px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.modal-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-heading,
+.modal-option {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-option-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.button-item-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--color-text-primary);
+    background-color: var(--color-border-primary);
+    border-radius: 50%;
+}
+
+.button-item.is-active .button-item-badge {
+    background-color: var(--color-bg-page);
+}
+
+.modal-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.modal-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 0;
+    border-top: 1px solid var(--color-border-primary);
+}
+
+.modal-alert svg {
+    flex-shrink: 0;
+}
+
+.modal-close {
+    width: 100%;
+}
+
+@keyframes modal-show {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 640px) {
+    .modal-content {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .modal-image-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 488px) {
+    .modal {
+        width: calc(100% - 32px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal[open] {
+        animation: none;
+    }
+}

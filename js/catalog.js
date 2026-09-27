@@ -1,8 +1,11 @@
+import productModal from "./product-modal.js"
+
 class Catalog {
     selectors = {
         products: ".catalog-products",
         tabs: ".tabs-filter",
         tab: "[data-category]",
+        card: ".catalog-item",
         grid: "#catalog-grid",
         showMoreButton: "#show-more",
     }
@@ -14,6 +17,7 @@ class Catalog {
 
     attributes = {
         ariaCurrent: "aria-current",
+        ariaHaspopup: "aria-haspopup",
     }
 
     dataUrl = "data/products.json"
@@ -55,6 +59,8 @@ class Catalog {
 
         this.tabsWrapper.addEventListener("click", this.handleTabClick.bind(this))
         this.showMoreButton.addEventListener("click", this.handleShowMore.bind(this))
+        this.grid.addEventListener("click", this.handleCardClick.bind(this))
+        this.grid.addEventListener("keydown", this.handleCardKeydown.bind(this))
         this.mediaQuery.addEventListener("change", this.handleMediaChange.bind(this))
     }
 
@@ -82,6 +88,20 @@ class Catalog {
         this.isExpanded = false
         this.setActiveTab(tab)
         this.render()
+    }
+
+    handleCardClick(event) {
+        const card = event.target.closest(this.selectors.card)
+        if (!card) return
+
+        productModal.open(this.allProducts[card.dataset.index])
+    }
+
+    handleCardKeydown(event) {
+        if (event.key !== "Enter" && event.key !== " ") return
+
+        event.preventDefault()
+        this.handleCardClick(event)
     }
 
     handleShowMore() {
@@ -129,6 +149,10 @@ class Catalog {
     createCard(product) {
         const card = document.createElement("div")
         card.className = "catalog-item"
+        card.dataset.index = this.allProducts.indexOf(product)
+        card.tabIndex = 0
+        card.setAttribute("role", "button")
+        card.setAttribute(this.attributes.ariaHaspopup, "dialog")
 
         const imageWrapper = document.createElement("div")
         imageWrapper.className = "catalog-image-wrapper"

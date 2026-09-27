@@ -117,6 +117,55 @@
         <div class="catalog-grid is-active" id="catalog-grid" aria-live="polite"></div>
         <button class="button-show-more button-secondary" id="show-more" aria-controls="catalog-grid" type="button">Show more</button>
       </section>
+      <dialog class="modal" id="product-modal" aria-labelledby="modal-title">
+        <div class="modal-content">
+          <div class="modal-image-wrapper">
+            <img class="modal-image" id="modal-image" alt="" />
+          </div>
+          <div class="modal-info">
+            <div class="modal-heading">
+              <h2 class="heading-3" id="modal-title"></h2>
+              <p class="body-medium" id="modal-description"></p>
+            </div>
+            <div class="modal-option">
+              <p class="body-medium" id="modal-sizes-label">Size</p>
+              <div class="modal-option-list" id="modal-sizes" role="group" aria-labelledby="modal-sizes-label"></div>
+            </div>
+            <div class="modal-option">
+              <p class="body-medium" id="modal-additives-label">Additives</p>
+              <div class="modal-option-list" id="modal-additives" role="group" aria-labelledby="modal-additives-label"></div>
+            </div>
+            <div class="modal-total heading-3">
+              <span>Total:</span>
+              <span id="modal-total" aria-live="polite"></span>
+            </div>
+            <div class="modal-alert">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_147811_7961)">
+                  <path d="M8 7.66663V11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8 5.00667L8.00667 4.99926" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_147811_7961">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p class="body-caption">
+                The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20%
+                discount.
+              </p>
+            </div>
+            <button class="button-secondary modal-close action-link" id="modal-close" type="button">Close</button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer class="footer">
       <div class="footer-brand">
