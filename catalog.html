@@ -11,40 +11,56 @@
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
     <link rel="stylesheet" href="css/modern-normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js?v=2"></script>
   </head>
-  <body data-theme="light">
-    <header class="header action-link">
+  <body data-theme="light" data-menu-expanded="false">
+    <header class="header">
       <a class="header-logo" href="index.html" aria-label="Coffee house logo">
         <img class="header-logo-light" src="assets/images/logo-light.svg" alt="" />
         <img class="header-logo-dark" src="assets/images/logo-dark.svg" alt="" />
       </a>
       <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-list-item"><a href="index.html#favorite">Favorite coffee</a></li>
-          <li class="nav-list-item"><a href="index.html#about">About</a></li>
-          <li class="nav-list-item"><a href="index.html#download">Mobile app</a></li>
-          <li class="nav-list-item"><a href="#contacts">Contact us</a></li>
-        </ul>
+        <div class="nav-menu action-link" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-list-item"><a href="index.html#favorite">Favorite coffee</a></li>
+            <li class="nav-list-item"><a href="index.html#about">About</a></li>
+            <li class="nav-list-item"><a href="index.html#download">Mobile app</a></li>
+            <li class="nav-list-item"><a href="index.html#contacts">Contact us</a></li>
+          </ul>
+        </div>
       </nav>
       <button class="theme-switch" id="theme-button" data-action="theme-switch" aria-label="Toggle theme" type="button">
-        <span class="theme-switch-icon-light">
+        <div class="theme-switch-icon-light">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M10 3V1C10 0.45 10.45 0 11 0C11.55 0 12 0.45 12 1V3C12 3.55 11.55 4 11 4C10.45 4 10 3.55 10 3ZM17.36 6.05L18.77 4.63C19.16 4.24 19.16 3.61 18.77 3.22C18.38 2.83 17.75 2.83 17.36 3.22L15.95 4.64C15.56 5.03 15.56 5.66 15.95 6.05C16.34 6.44 16.97 6.44 17.36 6.05ZM21 10H19C18.45 10 18 10.45 18 11C18 11.55 18.45 12 19 12H21C21.55 12 22 11.55 22 11C22 10.45 21.55 10 21 10ZM11 18C10.45 18 10 18.45 10 19V21C10 21.55 10.45 22 11 22C11.55 22 12 21.55 12 21V19C12 18.45 11.55 18 11 18ZM4.64 6.05L3.22 4.64C2.83 4.25 2.83 3.61 3.22 3.23C3.61 2.85 4.25 2.84 4.63 3.23L6.04 4.64C6.43 5.03 6.43 5.67 6.04 6.05C5.65 6.43 5.02 6.44 4.64 6.05ZM15.95 15.95C15.56 16.34 15.56 16.98 15.95 17.36L17.36 18.77C17.75 19.16 18.39 19.16 18.77 18.77C19.16 18.38 19.16 17.74 18.77 17.36L17.36 15.95C16.98 15.56 16.34 15.56 15.95 15.95ZM1 12H3C3.55 12 4 11.55 4 11C4 10.45 3.55 10 3 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM4.64 18.78L6.05 17.37C6.44 16.98 6.44 16.34 6.05 15.96C5.66 15.58 5.02 15.57 4.64 15.96L3.23 17.37C2.84 17.76 2.84 18.4 3.23 18.78C3.61 19.17 4.25 19.17 4.64 18.78ZM11 5C7.69 5 5 7.69 5 11C5 14.31 7.69 17 11 17C14.31 17 17 14.31 17 11C17 7.69 14.31 5 11 5Z"
             />
           </svg>
-        </span>
-        <span class="theme-switch-icon-dark">
+        </div>
+        <div class="theme-switch-icon-dark">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M9 0C4.03 0 0 4.03 0 9C0 13.97 4.03 18 9 18C13.97 18 18 13.97 18 9C18 8.54 17.96 8.08 17.9 7.64C16.92 9.01 15.32 9.9 13.5 9.9C10.52 9.9 8.1 7.48 8.1 4.5C8.1 2.69 8.99 1.08 10.36 0.0999999C9.92 0.0399999 9.46 0 9 0Z"
             />
           </svg>
-        </span>
+        </div>
       </button>
-      <div class="header-menu">
-        <a class="header-menu-link action-link" href="catalog.html">
+      <div id="menu-burger">
+        <button class="header-menu-burger button-icon-burger" id="burger-button" aria-label="Open menu" aria-expanded="false" type="button">
+          <div class="icon-burger-open">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0.75 0.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M0.75 8.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="icon-burger-close">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0.75 0.75L12.0637 12.0637" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M0.75 12.0637L12.0637 0.749998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </button>
+        <a class="header-menu-link action-link" id="menu-link" href="catalog.html">
           Menu
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
@@ -77,223 +93,79 @@
             />
           </svg>
         </a>
-        <button class="header-menu-burger button-icon-burger" data-action="burger-menu" aria-expanded="false" aria-label="Open menu" type="button">
-          <span class="icon-burger-open">
-            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0.75 0.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M0.75 8.75H16.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-          <span class="icon-burger-close">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0.75 0.75L12.0637 12.0637" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M0.75 12.0637L12.0637 0.749998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </button>
       </div>
     </header>
     <main class="main catalog">
       <section class="catalog-tabs">
         <h1 class="heading-2">Behind each of our cups hides an <span class="accent">amazing surprise</span></h1>
         <div class="tabs-filter">
-          <button class="tabs-filter button-item is-active" type="button" aria-current="true">
+          <button class="button-item is-active" type="button" data-category="coffee" aria-current="true">
             <img src="assets/icons/coffee.png" alt="" />
             Coffee
           </button>
-          <button class="tabs-filter button-item" type="button">
+          <button class="button-item" type="button" data-category="tea">
             <img src="assets/icons/tea.png" alt="" />
             Tea
           </button>
-          <button class="tabs-filter button-item" type="button">
+          <button class="button-item" type="button" data-category="dessert">
             <img src="assets/icons/dessert.png" alt="" />
             Dessert
           </button>
         </div>
       </section>
       <section class="catalog-products">
-        <!-- Coffee -->
-        <div class="catalog-grid is-active" id="catalog-grid-coffee">
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/coffee-1.webp" alt="Irish coffee photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Irish coffee</h2>
-              <p class="body-medium">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="heading-3">$7.00</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/coffee-2.webp" alt="Kahlua coffee photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Kahlua coffee</h2>
-              <p class="body-medium">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-              <p class="heading-3">$7.00</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/coffee-3.webp" alt="Honey raf photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Honey raf</h2>
-              <p class="body-medium">Espresso with frothed milk, cream and aromatic honey</p>
-              <p class="heading-3">$5.50</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/coffee-4.webp" alt="Ice cappuccino photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Ice cappuccino</h2>
-              <p class="body-medium">Cappuccino with soft thick foam in summer version with ice</p>
-              <p class="heading-3">$5.00</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/coffee-5.webp" alt="Espresso photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Espresso</h2>
-              <p class="body-medium">Classic black coffee</p>
-              <p class="heading-3">$4.50</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/coffee-6.webp" alt="Latte photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Latte</h2>
-              <p class="body-medium">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-              <p class="heading-3">$5.50</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/coffee-7.webp" alt="Latte macchiato photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Latte macchiato</h2>
-              <p class="body-medium">Espresso with frothed milk and chocolate</p>
-              <p class="heading-3">$5.50</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/coffee-8.webp" alt="Coffee with cognac photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Coffee with cognac</h2>
-              <p class="body-medium">Fragrant black coffee with cognac and whipped cream</p>
-              <p class="heading-3">$6.50</p>
-            </div>
-          </div>
-        </div>
-        <!-- Tea -->
-        <div class="catalog-grid" id="catalog-grid-tea">
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/tea-1.webp" alt="Moroccan tea photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Moroccan</h2>
-              <p class="body-medium">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
-              <p class="heading-3">$4.50</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/tea-2.webp" alt="Ginger tea photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Ginger</h2>
-              <p class="body-medium">Original black tea with fresh ginger, lemon and honey</p>
-              <p class="heading-3">$5.00</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/tea-3.webp" alt="Cranberry tea photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Cranberry</h2>
-              <p class="body-medium">Invigorating black tea with cranberry and honey</p>
-              <p class="heading-3">$5.00</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/tea-4.webp" alt="Sea buckthorn tea photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Sea buckthorn</h2>
-              <p class="body-medium">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
-              <p class="heading-3">$5.50</p>
-            </div>
-          </div>
-        </div>
-        <!-- Dessert -->
-        <div class="catalog-grid" id="catalog-grid-dessert">
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/dessert-1.webp" alt="Marble cheesecake photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Marble cheesecake</h2>
-              <p class="body-medium">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
-              <p class="heading-3">$3.50</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/dessert-2.webp" alt="Red velvet photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Red velvet</h2>
-              <p class="body-medium">Layer cake with cream cheese frosting</p>
-              <p class="heading-3">$4.00</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/dessert-3.webp" alt="Cheesecakes photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Cheesecakes</h2>
-              <p class="body-medium">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
-              <p class="heading-3">$4.50</p>
-            </div>
-          </div>
-          <div class="catalog-item">
-            <img class="catalog-image" src="assets/images/dessert-4.webp" alt="Creme brulee photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Creme brulee</h2>
-              <p class="body-medium">Delicate creamy dessert in a caramel basket with wild berries</p>
-              <p class="heading-3">$4.00</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/dessert-5.webp" alt="Pancakes photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Pancakes</h2>
-              <p class="body-medium">Tender pancakes with strawberry jam and fresh strawberries</p>
-              <p class="heading-3">$4.50</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/dessert-6.webp" alt="Honey cake photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Honey cake</h2>
-              <p class="body-medium">Classic honey cake with delicate custard</p>
-              <p class="heading-3">$4.50</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/dessert-7.webp" alt="Chocolate cake photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Chocolate cake</h2>
-              <p class="body-medium">Cake with hot chocolate filling and nuts with dried apricots</p>
-              <p class="heading-3">$5.50</p>
-            </div>
-          </div>
-          <div class="catalog-item is-hidden">
-            <img class="catalog-image" src="assets/images/dessert-8.webp" alt="Black forest photo" />
-            <div class="catalog-content">
-              <h2 class="heading-3">Black forest</h2>
-              <p class="body-medium">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
-              <p class="heading-3">$6.50</p>
-            </div>
-          </div>
-        </div>
-        <button class="button-show-more button-slider is-active" id="show-more" aria-label="Show more" aria-controls="catalog-grid-coffee" type="button">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path
-              d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
+        <div class="catalog-grid is-active" id="catalog-grid" aria-live="polite"></div>
+        <button class="button-show-more button-secondary" id="show-more" aria-controls="catalog-grid" type="button">Show more</button>
       </section>
+      <dialog class="modal" id="product-modal" aria-labelledby="modal-title">
+        <div class="modal-content">
+          <div class="modal-image-wrapper">
+            <img class="modal-image" id="modal-image" alt="" />
+          </div>
+          <div class="modal-info">
+            <div class="modal-heading">
+              <h2 class="heading-3" id="modal-title"></h2>
+              <p class="body-medium" id="modal-description"></p>
+            </div>
+            <div class="modal-option">
+              <p class="body-medium" id="modal-sizes-label">Size</p>
+              <div class="modal-option-list" id="modal-sizes" role="group" aria-labelledby="modal-sizes-label"></div>
+            </div>
+            <div class="modal-option">
+              <p class="body-medium" id="modal-additives-label">Additives</p>
+              <div class="modal-option-list" id="modal-additives" role="group" aria-labelledby="modal-additives-label"></div>
+            </div>
+            <div class="modal-total heading-3">
+              <span>Total:</span>
+              <span id="modal-total" aria-live="polite"></span>
+            </div>
+            <div class="modal-alert">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_147811_7961)">
+                  <path d="M8 7.66663V11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8 5.00667L8.00667 4.99926" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_147811_7961">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p class="body-caption">
+                The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20%
+                discount.
+              </p>
+            </div>
+            <button class="button-secondary modal-close action-link" id="modal-close" type="button">Close</button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer class="footer">
       <div class="footer-brand">
@@ -382,7 +254,7 @@
             </a>
           </li>
           <li>
-            <span class="link-contact action-link">
+            <span class="link-contact action-link no-link">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <g clip-path="url(#clip0_217_1736)">
                   <path d="M10 5L10 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
